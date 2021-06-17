@@ -4,12 +4,12 @@
  * and open the template in the editor.
  */
 package sort.methods;
-
+import mystrategy.Strategy;
 /**
  *
  * @author LeopardProMK
  */
-public class Bubblesort {
+public class Bubblesort extends Strategy{
     /* http://www.algorytm.org/algorytmy-sortowania/sortowanie-babelkowe-bubblesort.html */
     //private static int[] tablica;
  
@@ -23,8 +23,10 @@ public class Bubblesort {
         for (int liczba:tablica)
         System.out.print(liczba+" ");
     }*/
-
-    public static void sort(double[] tablica)
+    double[] tablica;
+    
+   @Override
+    public double[] sort(double[] tablica)
     {
         int mniejszaLiczba = tablica.length-1; // indeks pierwszej porownywanej liczby; wartosc poczatkowa
         int wiekszaLiczba = mniejszaLiczba-1; // indeks drugiej porownywanej liczby; wartosc poczatkowa
@@ -47,5 +49,7 @@ public class Bubblesort {
             wiekszaLiczba--;
         }
         }
+        this.tablica=tablica;
+        return tablica;
     }
 }

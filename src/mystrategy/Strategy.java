@@ -10,5 +10,7 @@ package mystrategy;
  * @author justy
  */
 public abstract class Strategy {
-    public abstract void sort();
+    public double[] sort(double[] table){
+    return table;
+    };
 }
