@@ -7,6 +7,7 @@ package mystrategy;
 
 import data.DataGenerator;
 import sort.methods.*;
+import sort.strategy.Stopwatch;
 import mystrategy.Choice;
 import java.util.Arrays;
 
@@ -25,14 +26,16 @@ public class Client {
         // http://www.algorytm.org/algorytmy-sortowania/
         
         //double[] dataNonSort = DataGenerator.generate(100000);
-        double[] dataNonSort = DataGenerator.generate(100);
-        System.out.println(Arrays.toString(dataNonSort));
+        double[] dataNonSort = DataGenerator.generate(1000);
+        //System.out.println(Arrays.toString(dataNonSort));
         Choice sorting = new Choice();
        /* Wzorzec Stratega */
         //...
         Strategy strategy = new Bubblesort();
-        sorting.setStrategy(strategy, dataNonSort);
-        System.out.println(Arrays.toString(dataNonSort));
-        System.out.println("Time: ??");
+        //Stopwatch watch = new Stopwatch();
+        sorting.setStrategy(strategy, dataNonSort, 1);
+        //double tim = watch.elapsedTime();
+        //System.out.println("Time: " + tim);
+        //System.out.println(Arrays.toString(dataNonSort));
     }
 }

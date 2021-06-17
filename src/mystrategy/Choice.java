@@ -10,7 +10,7 @@ package mystrategy;
  * @author justy
  */
 public class Choice {
-    public void setStrategy(Strategy strat, double[] tablica){
-        strat.sort(tablica);
+    public void setStrategy(Strategy strat, double[] tablica, int withTime){
+        strat.sort(tablica, withTime);
     }
 }

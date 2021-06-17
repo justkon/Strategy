@@ -5,6 +5,7 @@
  */
 package sort.methods;
 import mystrategy.Strategy;
+import sort.strategy.Stopwatch;
 /**
  *
  * @author LeopardProMK
@@ -26,8 +27,9 @@ public class Bubblesort extends Strategy{
     double[] tablica;
     
    @Override
-    public double[] sort(double[] tablica)
+    public double[] sort(double[] tablica, int withTime)
     {
+        Stopwatch watch = new Stopwatch();
         int mniejszaLiczba = tablica.length-1; // indeks pierwszej porownywanej liczby; wartosc poczatkowa
         int wiekszaLiczba = mniejszaLiczba-1; // indeks drugiej porownywanej liczby; wartosc poczatkowa
 
@@ -49,6 +51,9 @@ public class Bubblesort extends Strategy{
             wiekszaLiczba--;
         }
         }
+        if (withTime==1){
+        double tim = watch.elapsedTime();
+        System.out.println("Time: " + tim);}
         this.tablica=tablica;
         return tablica;
     }

@@ -10,7 +10,7 @@ package mystrategy;
  * @author justy
  */
 public abstract class Strategy {
-    public double[] sort(double[] table){
+    public double[] sort(double[] table, int withTime){
     return table;
     };
 }
