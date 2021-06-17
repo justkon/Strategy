@@ -27,15 +27,16 @@ public class Client {
         
         //double[] dataNonSort = DataGenerator.generate(100000);
         double[] dataNonSort = DataGenerator.generate(1000);
-        //System.out.println(Arrays.toString(dataNonSort));
+        System.out.println(Arrays.toString(dataNonSort));
         Choice sorting = new Choice();
        /* Wzorzec Stratega */
         //...
-        Strategy strategy = new Bubblesort();
+        //Strategy strategy = new Bubblesort();
+        Strategy strategy = new Insertionsort();
         //Stopwatch watch = new Stopwatch();
-        sorting.setStrategy(strategy, dataNonSort, 1);
+        sorting.setStrategy(strategy, dataNonSort, 1); //1 - with time, 0 - without time
         //double tim = watch.elapsedTime();
         //System.out.println("Time: " + tim);
-        //System.out.println(Arrays.toString(dataNonSort));
+        System.out.println(Arrays.toString(dataNonSort));
     }
 }
