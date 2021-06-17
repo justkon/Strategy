@@ -32,7 +32,8 @@ public class Client {
        /* Wzorzec Stratega */
         //...
         //Strategy strategy = new Bubblesort();
-        Strategy strategy = new Insertionsort();
+        //Strategy strategy = new Insertionsort();
+        Strategy strategy = new Quicksort();
         //Stopwatch watch = new Stopwatch();
         sorting.setStrategy(strategy, dataNonSort, 1); //1 - with time, 0 - without time
         //double tim = watch.elapsedTime();
